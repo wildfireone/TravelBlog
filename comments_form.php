@@ -5,6 +5,7 @@ $error = 0;
 	if(isset($_POST['id']) and isset($_SESSION['user']['id'])){
 		
 		$comments = addslashes($_POST['InputComments']);
+		$comments = str_replace('<script>','',$comments);
 		$adventure_id = $_POST['id'];
 		$commented_by =  $_SESSION['user']['id'];
 		$date = $date =date("Y-m-d H:i:s");
