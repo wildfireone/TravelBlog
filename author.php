@@ -15,7 +15,7 @@ include('./conn.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CM3028: WEB APPLICATION DEVELOPMENT</title>
+    <title>Travel Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
