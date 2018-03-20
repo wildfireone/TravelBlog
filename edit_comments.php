@@ -21,7 +21,7 @@ $row = mysqli_fetch_array($query3);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CM3028: WEB APPLICATION DEVELOPMENT</title>
+    <title>The Travel Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">

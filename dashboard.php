@@ -1,8 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['user'])){
-	header('Location: ./index.php');	
-	
+	header('Location: ./index.php');
+
 }
 
 ?>
@@ -17,7 +17,7 @@ if(!isset($_SESSION['user'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CM3028: WEB APPLICATION DEVELOPMENT</title>
+    <title>The Travel Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -54,7 +54,7 @@ if(!isset($_SESSION['user'])){
                 <br>
                 <br>
                     <h1 class="section-heading">Dashboard</h1>
-                    
+
                     <p class="lead section-lead"> Welcome <?php echo $_SESSION['user']['name']; ?>.You can post new adventure by clicking on the link at the top navigation</p>
                 </div>
             </div>

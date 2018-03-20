@@ -17,7 +17,7 @@ if(!isset($_SESSION['admin'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CM3028: ADMIN PANEL</title>
+    <title>The Travel Blog: ADMIN PANEL</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -59,7 +59,7 @@ if(!isset($_SESSION['admin'])){
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"> <span>CM3028 - ADMIN PANEL</span></a>
+                        <a href="index.html" class="site_title"> <span>The Travel Blog - ADMIN PANEL</span></a>
                     </div>
                     <div class="clearfix"></div>
 
