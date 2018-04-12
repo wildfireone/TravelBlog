@@ -29,29 +29,37 @@ $error = 0;
 		foreach($_FILES['apic']['name'] as $imgid=>$imgname){
 			
 			//if($_FILES['apic']['error'][$imgid]==4) continue;
+			
 				
 			$random_number_name = rand().$_FILES['apic']['name'] [$imgid];
 			
 			$destination_ran=	$destination_image.$random_number_name;
 			
-			$upload_files= copy($_FILES['apic']['tmp_name'] [$imgid],$destination_ran);
+			$uploaded_type = $_FILES[ 'apic' ][ 'type' ][$imgid]; 
+ 
 			
-			if($upload_files){
+			if( ( $uploaded_type == "image/jpeg" || $uploaded_type == "image/png" ) ){
+				$upload_files= copy($_FILES['apic']['tmp_name'] [$imgid],$destination_ran);
+			
+				if($upload_files){
 					$product_default=0;
-				if(isset($_POST['apic_default']) and $_POST['apic_default']==$imgid){
+					if(isset($_POST['apic_default']) and $_POST['apic_default']==$imgid){
 					
-					$product_default=1;
+						$product_default=1;
 					}
-				$product_qury="INSERT INTO uploads SET name='".$random_number_name."', 	adventure_id='".$last_adventure_id."',	default_pic='".$product_default."' ";		
-				$product_exe	= mysqli_query($con,$product_qury);
-				
-				
+					$product_qury="INSERT INTO uploads SET name='".$random_number_name."', 	adventure_id='".$last_adventure_id."',	default_pic='".$product_default."' ";		
+					$product_exe	= mysqli_query($con,$product_qury);
 				}
+				header('Location:my_adventures.php?message=success');	
+			}
+			else{
+				header('Location:post_adventure.php?error=1');	
+			}
 			
-				
+			
 		}
 		
-		header('Location:my_adventures.php?message=success');
+		
 	 }
 	
 	
