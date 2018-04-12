@@ -28,7 +28,7 @@ $error = 0;
 		
 		foreach($_FILES['apic']['name'] as $imgid=>$imgname){
 			
-			if($_FILES['apic']['error'][$imgid]==4) continue;
+			//if($_FILES['apic']['error'][$imgid]==4) continue;
 				
 			$random_number_name = rand().$_FILES['apic']['name'] [$imgid];
 			
